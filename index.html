@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ferreteria RUBEN GUERRERO</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Agregar enlaces a WhatsApp y Facebook con iconos, y un carrusel de imágenes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Bienvenido a su Ferreteria RUBEN GUERRERO</h1>
+        <div class="social-icons header-icons">
+            <a href="https://wa.me/+573174008775" target="_blank" class="fab fa-whatsapp"></a>
+            <a href="https://facebook.com/ferreteria Ruben Guerrero" target="_blank" class="fab fa-facebook-f"></a>
+        </div>
+    </header>
+
+    <style>
+        .header-icons {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .header-icons a {
+            font-size: 38px;
+            color: #20fc32;
+            text-decoration: none;
+        }
+
+        .header-icons a:hover {
+            color: #007bff;
+        }
+    </style>
+
+    <main>
+        <section>
+            <h2>Nuestros Productos</h2>
+            <!-- Add your product listings here -->
+            <div class="product-listing">
+                <h2>Herramientas de construcción</h2>
+                <p>Descripción del producto 1.</p>
+
+                <p>Precio: $XX.XX</p>
+                <button class="buy-button">Comprar</button>
+            </div>     
+        
+            
+        </section>
+
+        <section class="image-gallery">
+            
+            <img src="imagenes/Leonardo_Phoenix_10_Herramientas_de_construccion_para_el_hogar_1.jpg" alt="Herramientas de construcción">
+            <img src="imagenes/Leonardo_Phoenix_10_Imagen_de_un_apartamento_que_muestra_dos_e_1.jpg" alt="Apartamento 1">
+            <img src="imagenes/Leonardo_Phoenix_10_Imagen_promocionando_servicios_A_highquali_2.jpg" alt="Promoción 1">
+            <img src="imagenes/ChatGPT Image 27 abr 2025, 01_15_03.png" alt="Imagen generada por ChatGPT">
+            <img src="imagenes/Gemini_Generated_Image_1rk4vi1rk4vi1rk4.jpg" alt="Imagen generada por Gemini">
+        </section>
+
+        <h1>sobre nosotros </h1>
+
+        <div class="carousel">
+            <img src="image1.jpg" alt="Imagen 1">
+            <img src="image2.jpg" alt="Imagen 2">
+            <img src="image3.jpg" alt="Imagen 3">
+            <img src="image4.jpg" alt="Imagen 4">
+            <div class="carousel-buttons">
+                <button class="prev">&lt;</button>
+                <button class="next">&gt;</button>
+            </div>
+        </div>
+
+        <section id="about-us">
+            <h2>Sobre Nosotros</h2>
+            <p>La Ferretería Ruben Guerrero lleva más de 5 años abierta, ofreciendo productos de alta calidad y un servicio excepcional. Sin embargo, nuestros expertos en reformas y construcción cuentan con más de 35 años de experiencia, respaldados por las mejores referencias y una amplia base de clientes satisfechos. Nos enorgullece ofrecer los mejores precios del mercado, asegurando siempre la satisfacción de nuestros clientes.</p>
+        </section>
+
+    </main>
+    <footer>
+        <p>&copy; 2025 Ferreteria Ruben Guerrero. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const carousel = document.querySelector('.carousel');
+            const images = carousel.querySelectorAll('img');
+            const totalImages = images.length;
+            let currentIndex = 0;
+
+            const nextImage = () => {
+                images[currentIndex].style.transform = `translateX(-100%)`;
+                currentIndex = (currentIndex + 1) % totalImages;
+                images[currentIndex].style.transform = `translateX(0)`;
+            };
+
+            const prevImage = () => {
+                images[currentIndex].style.transform = `translateX(100%)`;
+                currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+                images[currentIndex].style.transform = `translateX(0)`;
+            };
+
+            document.querySelector('.next').addEventListener('click', nextImage);
+            document.querySelector('.prev').addEventListener('click', prevImage);
+        });
+    </script>
+</body>
+</html>

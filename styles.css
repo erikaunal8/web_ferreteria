@@ -1,0 +1,102 @@
+/* Variables de colores principales */
+:root {
+    --primary-color: #040e68; /* Naranja */
+    --secondary-color: #FFD700; /* Amarillo */
+    --tertiary-color: #8B4513; /* Café */
+    --quaternary-color: #040e68; /* Azul */
+    --quinary-color: #008000; /* Verde */
+}
+
+/* Estilo general del cuerpo */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--secondary-color);
+    color: var(--tertiary-color);
+}
+
+/* Estilo del encabezado */
+header {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Estilo del pie de página */
+footer {
+    background-color: var(--quaternary-color);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Estilo de los íconos sociales */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin: 3rem 0;
+}
+
+.social-icons a {
+    color: var(verde-quinary-color);
+    font-size: 4rem;
+    text-decoration: none;
+}
+
+/* Estilo del carrusel */
+.carousel {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    margin: 2rem auto;
+    position: relative;
+}
+
+.carousel img {
+    width: 100%;
+    flex-shrink: 0;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-buttons {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.carousel-buttons button {
+    background-color: var(--primary-color);
+    border: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Ajuste de la galería de imágenes para que ocupe todo el ancho de la página */
+section.image-gallery {
+    display: flex;
+    width: 100%; /* Cambiado a 100% para ocupar todo el ancho */
+    height: 330px;
+}
+
+section.image-gallery img {
+    width: 0px;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: 0.8;
+    transition: 0.5s ease;
+}
+
+section.image-gallery img:hover {
+    cursor: crosshair;
+    width: 300px;
+    opacity: 1;
+    filter: contrast(120%);
+}
